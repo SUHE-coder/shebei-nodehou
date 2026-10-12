@@ -1,0 +1,27 @@
+{
+  "name": "device-manager-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/index.js",
+    "dev:lan": "node src/start-lan.js",
+    "db:check": "node src/check-db.js",
+    "db:migrate:location": "node src/migrate-device-location.js",
+    "test:client": "node --test test/client-device.test.js",
+    "test:auth": "node --test test/auth.test.js test/auth-config.test.js test/client-auth.test.js",
+    "test:devices": "node --test test/device-admin.test.js test/device-maintenance.test.js test/device-list.test.js test/device-query.test.js test/client-maintenance.test.js",
+    "test:images": "node --test test/device-images.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
